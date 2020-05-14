@@ -6,6 +6,9 @@ jobs:
     name: Hello world action
     runs-on: self-hosted
     steps:
-      - uses: actions/checkout@v1
       - name: run a one line script
         run: touch /home/cloud_user/woohoo.file
+      - name: run script
+        run: |
+          chmod +x ./scripts/installTerraform.sh
+          ./scripts/installTerraform.sh
