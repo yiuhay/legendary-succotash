@@ -5,11 +5,14 @@ jobs:
   build:
     name: Hello world action
     runs-on: self-hosted
-    steps:
-      - name: run a one line script
-        run: touch /home/cloud_user/woohoo.file
-      - name: run script
-        uses: ./scripts
+    steps
+      - name: git
         run: |
-          chmod +x installTerraform.sh
-          installTerraform.sh
+          cd ~/legendary-succotash
+          git pull
+      - name: run a one line script
+        run: ~/legendary-succotash/woohoo.file
+      - name: run script
+        run: |
+          chmod +x ~/legendary-succotash/scripts/installTerraform.sh
+          ~/legendary-succotash/scripts/installTerraform.sh
