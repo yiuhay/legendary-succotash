@@ -11,7 +11,7 @@ jobs:
           cd ~/legendary-succotash
           git pull
       - name: run a one line script
-        run: ~/legendary-succotash/woohoo.file
+        run: touch ~/woohoo.file
       - name: run script
         run: |
           chmod +x ~/legendary-succotash/scripts/installTerraform.sh
