@@ -9,6 +9,7 @@ jobs:
       - name: run a one line script
         run: touch /home/cloud_user/woohoo.file
       - name: run script
+        uses: ./scripts
         run: |
-          chmod +x ../../scripts/installTerraform.sh
-          ../../scripts/installTerraform.sh
+          chmod +x installTerraform.sh
+          installTerraform.sh
